@@ -14,7 +14,7 @@ app.use((req, res, next) => {
 })
 
 /// Routes
-app.use("/mongoose", require("./routes/mong.js"))
+app.use("/mongoose", require("./routes/mongoose.js"))
 
 app.get("/error", (req, res, next) => {
     next(new Error("Custom Error"))
