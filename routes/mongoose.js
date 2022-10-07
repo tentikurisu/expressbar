@@ -2,13 +2,13 @@ const router = require("express").Router();
 const {Schema, model} = require("mongoose");
 
 const mixschema = new Schema({
-    Adelhyde:Number,
-    Powdered_Delta:Number,
-    Broson_Extract:Number,
-    Flanergide:Number,
-    Karmotrine:Number,
-    On_the_rocks:String,
-    Mixed:String,
+    Adelhyde:{Number},
+    Powdered_Delta:{Number},
+    Broson_Extract:{Number},
+    Flanergide:{Number},
+    Karmotrine:{Number},
+    On_the_rocks:{String},
+    Mixed:{String},
 });
 
 const cocktailschema = new Schema({
