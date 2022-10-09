@@ -28,12 +28,9 @@ router.get("/getAll", (req, res, next) => {
     }).catch(next)
 })
 router.get("/getbyflavour/:flavour", (req, res, next) => {
-
-    for (const t of flavour) {
-        if (t.flavour == req.params.flavour){
-            res.status(200).json(t)
-            return;
-        }}next(new Error("Index invaild"))
+    cocktailModel.find({flavour}).then(cocktail => {
+        res.status(200).json(cocktail)
+    }).catch(next)
 })
 
 router.put("/create", (req, res, next) => {
